@@ -30,7 +30,8 @@ hmc5883l电子罗盘  自测, 校准，例子
 
 程序中使用校准参数
 
-	```python
+```python
+
 	def fix(x,y):
 		x=x-xc 
 		y=y-yc
@@ -40,9 +41,16 @@ hmc5883l电子罗盘  自测, 校准，例子
 	   		y=y*(a/b) 
 			
 		return x,y
-	```
+```
+
+本程序中直接将
+参数写入 car_statics.py 即可运行
+
 
 ## 运行
+
+注意将car_static中的参数替换为自己传感器校准后的参数
+
 ```shell
 	
 	sudo python compass.py

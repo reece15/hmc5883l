@@ -24,7 +24,7 @@ hmc5883l电子罗盘  自测, 校准，例子
 	cat 1.plot | awk 'BEGIN{res="["}{res=res $1" "$2";";}END{res=res"]";print res}'
 	#步骤4: 设置matlab当前工作目录 为 tools/HMC5883拟合椭圆
 	#步骤5: matlab 输入 XY = [x y, x1, y1, x2 y2, ...]，运行;      其中XY=后面粘贴步骤三产生的数据
-	#步骤6: matlab hmc5883，运行 ，产生四个数据xc yc a b
+	#步骤6: matlab 输入 hmc5883，运行 ，产生四个数据xc yc a b
 	
 ```
 

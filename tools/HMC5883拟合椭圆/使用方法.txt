@@ -1,0 +1,20 @@
+不熟悉matlab的朋友可以看一下
+1.打开matlab，设置Current Folder为当前文件夹
+2.输入XY=[x1 y1;...;xi yi;...;xn yn]其中xi,yi为将芯片水平旋转到各个角度后所得的测量值
+3.在主窗口输入hmc5883然后回车即可
+
+此时将绘制出原始点以及拟合后的椭圆，并输出：result = xc yc a b
+其中（xc，yc）表示椭圆中心的坐标，a表示椭圆的半长轴，b表示椭圆的半短轴
+
+
+校准步骤：
+1.将芯片水平放置，不断旋转芯片得到一组xy轴数据
+2.使用matlab拟合椭圆，得到中心坐标(xc,yc) 半长轴a 半短轴b
+3.在程序中校准x，y：
+  x=x-xc 
+   y=y-yc 
+   y=y*(b/a)若椭圆是“竖着”的 #if b>a
+   y=y*(a/b) 若椭圆是“躺着”的 #if a>b
+
+
+作者:http://bbs.elecfans.com/jishu_480907_1_1.html
